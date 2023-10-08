@@ -29,6 +29,7 @@ namespace Katharsis.DocumentsGenerator.Modules.Letter
 
             containerRegistry.RegisterForNavigation<TopNavigation, TopNavigationViewModel>();
             containerRegistry.RegisterForNavigation<LettersListView, LettersListViewModel>();
+            containerRegistry.RegisterForNavigation<OfficialLetterFormView, OfficialLetterFormViewModel>();
         }
     }
 }

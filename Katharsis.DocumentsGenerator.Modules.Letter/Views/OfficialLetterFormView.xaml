@@ -4,9 +4,137 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Katharsis.DocumentsGenerator.Modules.Letter.Views"
+             xmlns:vm="clr-namespace:Katharsis.DocumentsGenerator.Modules.Letter.ViewModels"
+             xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
              mc:Ignorable="d" 
+             d:DataContext="{d:DesignInstance Type=vm:OfficialLetterFormViewModel}"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-            
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0">
+                <TextBlock Text="City"/>
+                <TextBox Text="{Binding Letter.City}"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="0" Grid.Column="1">
+                <TextBlock Text="Date"/>
+                <DatePicker Text="{Binding Letter.Date}"/>
+            </StackPanel>
+
+            <GroupBox Grid.Row="1" Grid.Column="0" Header="Sender">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0">
+                        <TextBlock Text="Title"/>
+                        <TextBox Text="{Binding Letter.Sender.Title}"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="1">
+                        <TextBlock Text="FirstName"/>
+                        <TextBox Text="{Binding Letter.Sender.FirstName}"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="2">
+                        <TextBlock Text="LastName"/>
+                        <TextBox Text="{Binding Letter.Sender.LastName}"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="3">
+                        <TextBlock Text="Street"/>
+                        <TextBox Text="{Binding Letter.Sender.Address.Street}"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="4">
+                        <TextBlock Text="Number"/>
+                        <TextBox Text="{Binding Letter.Sender.Address.Number}"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="5">
+                        <TextBlock Text="Post code"/>
+                        <TextBox Text="{Binding Letter.Sender.Address.PostCode}"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="6">
+                        <TextBlock Text="City"/>
+                        <TextBox Text="{Binding Letter.Sender.Address.City}"/>
+                    </StackPanel>
+                </Grid>
+            </GroupBox>
+
+            <GroupBox Grid.Row="1" Grid.Column="1" Header="Addressee">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Grid.Row="0">
+                        <TextBlock Text="Title"/>
+                        <TextBox Text="{Binding Letter.Addressee.Title}"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="1">
+                        <TextBlock Text="FirstName"/>
+                        <TextBox Text="{Binding Letter.Addressee.FirstName}"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="2">
+                        <TextBlock Text="LastName"/>
+                        <TextBox Text="{Binding Letter.Addressee.LastName}"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="3">
+                        <TextBlock Text="Street"/>
+                        <TextBox Text="{Binding Letter.Addressee.Address.Street}"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="4">
+                        <TextBlock Text="Number"/>
+                        <TextBox Text="{Binding Letter.Addressee.Address.Number}"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="5">
+                        <TextBlock Text="Post code"/>
+                        <TextBox Text="{Binding Letter.Addressee.Address.PostCode}"/>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="6">
+                        <TextBlock Text="City"/>
+                        <TextBox Text="{Binding Letter.Addressee.Address.City}"/>
+                    </StackPanel>
+                </Grid>
+            </GroupBox>
+        </Grid>
     </Grid>
 </UserControl>

@@ -13,6 +13,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Katharsis.DocumentsGenerator.Core\Katharsis.DocumentsGenerator.Core.csproj" />
+    <ProjectReference Include="..\Katharsis.DocumentsGenerator.Models.Interfaces\Katharsis.DocumentsGenerator.Models.Interfaces.csproj" />
+    <ProjectReference Include="..\Katharsis.DocumentsGenerator.Models\Katharsis.DocumentsGenerator.Models.csproj" />
   </ItemGroup>
 
 </Project>

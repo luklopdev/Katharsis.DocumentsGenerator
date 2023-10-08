@@ -4,10 +4,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Katharsis.DocumentsGenerator.Modules.Letter.Menus"
+             xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:vm="clr-namespace:Katharsis.DocumentsGenerator.Modules.Letter.ViewModels"
+             d:DataContext="{d:DesignInstance Type=vm:TopNavigationViewModel}"
              mc:Ignorable="d">
     <Grid>
         <StackPanel Orientation="Horizontal">
-            <Button Content="Official Letter"></Button>
+            <Button Content="Official Letter" 
+                    Command="{Binding OfficialLetterCommand}"/>
         </StackPanel>
     </Grid>
 </UserControl>
